@@ -1,13 +1,29 @@
 import '../css-files/review.css'; //css
-import { Link } from "react-router-dom"; //routing
-import React from 'react';
+import { Link, useNavigate, useLocation } from "react-router-dom"; //routing
+import React, { useEffect } from 'react';
 
 export default function Review(){
-    
+    const navi = useNavigate();
+    const loc = useLocation();
+
+    useEffect(() => {
+        if (loc.state?.from === "/calculator") {
+            const handlePopState = () => {
+                navi("/", { replace: true });
+            };
+
+            window.addEventListener("popstate", handlePopState);
+
+            return () => {
+                window.removeEventListener("popstate", handlePopState);
+            };
+        }
+    }, [loc, navi]);
+
     function handleSubmit(e){
         e.preventDefault();
         alert("Thanks for your review!");
-        window.location.replace("/");
+        navi("/");
     }
 
     return (
