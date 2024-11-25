@@ -18,7 +18,7 @@ legend {
 }
 textarea{
     resize: none;
-    margin-left: 100px;
+    margin-left: 70px;
     font-size: 19px;
 }
 input[type="number"]{
@@ -39,7 +39,7 @@ label{
     display: inline-block;
     margin-bottom: 8px;
     margin-right: 10px;
-    margin-left: 100px;
+    margin-left: 70px;
 }
 button{
     display: block;
@@ -50,5 +50,5 @@ button{
     color: black;
 }
 fieldset:hover legend{
-    background-color: #4CAF50;
+    background-color: #6af16f;
 }

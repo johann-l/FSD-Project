@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Calogic from "./calendar-logic";
 
+
 export default function Calendar(){
-    const { year, setYear, month, setMonth, days, generateCalendar } = Calogic();
+
+  const {
+    year,
+    setYear,
+    month,
+    setMonth,
+    days,
+    events
+    } = Calogic();
 
     return(
         <div>
@@ -11,7 +20,7 @@ export default function Calendar(){
           <br />
           <h1>Calendar App</h1>
           <div style={{ padding: "20px" }}>
-            <form id="calendarForm" onSubmit={handleSubmit}>
+            <form id="calendarForm" onSubmit={Calogic}>
               <label htmlFor="year">Enter Year:</label>
               <input
                 type="number"
@@ -62,26 +71,30 @@ export default function Calendar(){
                   <th>Sat</th>
                 </tr>
               </thead>
-              <tbody>
-                {Array.from({ length: 6 }).map((_, rowIndex) => (
-                  <tr key={rowIndex}>
-                    {Array.from({ length: 7 }).map((_, colIndex) => {
-                      const day = rowIndex * 7 + colIndex + 1;
-                      return (
-                        <td key={day}>
-                          <button
-                            id={day}
-                            onClick={() => addEvent(day)}
-                            style={{ width: "100%" }}
-                          >
-                            {day <= 31 ? day : ""}
-                          </button>
-                        </td>
+              <tbody>{(() =>{
+                const rows = [];
+                let dayCounter = 1; 
+                for (let rowIndex = 0; rowIndex < 6; rowIndex++) {
+                  const cells = [];
+
+                  for (let colIndex = 0; colIndex < 7; colIndex++) {
+                      const day = dayCounter++; // Increment the day counter
+                      
+                      cells.push(
+                          <td key={`${rowIndex}-${colIndex}`}>
+                              {day <= 31 ? 
+                                (<button
+                                  id={day}
+                                  onClick={() => addEvent(day)}
+                                  style={{ width: "100%" }}
+                                >{day}</button> ) : ("")}
+                          </td>
                       );
-                    })}
-                  </tr>
-                ))}
-              </tbody>
+                  }
+
+                rows.push(<tr key={rowIndex}>{cells}</tr>);
+                }
+            })()}</tbody>
             </table>
     
             {/* Event List */}
