@@ -1,0 +1,27 @@
+legend::first-letter{
+   display: block;
+   text-transform: uppercase;
+   color:darkred;
+    font-size:20px;
+}
+textarea{
+    resize: none;
+}
+button{
+    display: block;
+    margin:  50px auto;
+    font-size: x-large;
+    border-radius: 10px;
+    background-color: burlywood;
+    color: black;
+}
+fieldset{
+    margin-bottom: 32px;
+    border:1px dashed black;
+}
+legend{
+    color:white; 
+    font-size: 17px; 
+    font-variant: small-caps;
+}
+    
