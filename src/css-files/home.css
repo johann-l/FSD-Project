@@ -3,7 +3,7 @@
     margin: 30px 10px;
     padding: 5px;
     text-align: center;
-    border: 1px double black;
+    border: 1px dotted black;
 }
 #divID h1{
     font-family: system-ui; 
