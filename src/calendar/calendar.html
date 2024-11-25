@@ -1,0 +1,121 @@
+<!DOCTYPE html5>
+<html>
+ <head>
+	<title>Calendar App</title>
+	<link rel="stylesheet" href="../styles.css" />
+	<style>
+		table{
+			width: 80%;
+			border-collapse: collapse;
+		}
+		th,td{
+			width:50px;
+			text-align: center;
+			padding: 7px 20px;
+		}
+		table button{
+			width: 100%;
+			height:30px;
+		}
+	</style>
+	<script type="text/javascript" src="./calendar.js" defer></script>
+	<script type="text/javascript" src="./eventday.js" defer></script>
+ </head>
+ <body>
+  <a href="../home/index.html">Go Back</a><br>
+  <h1>Calendar app</h1>
+  <div style="padding: 20px;">
+	<form id="calendarForm">
+		<label for="year">Enter Year:</label>
+		<input type="number" id="year" placeholder="1900-...." value="1900" min="1900"/><br><br>
+		
+		<label for="month">Select Month:</label>
+		<select id="month" required>
+		  <option value="01">January</option>
+		  <option value="02">February</option>
+		  <option value="03">March</option>
+		  <option value="04">April</option>
+		  <option value="05">May</option>
+		  <option value="06">June</option>
+		  <option value="07">July</option>
+		  <option value="08">August</option>
+		  <option value="09">September</option>
+		  <option value="10">October</option>
+		  <option value="11">November</option>
+		  <option value="12">December</option>
+		</select><br><br>
+		
+		<button type="submit">Generate Calendar</button>
+	  </form>
+		<table id="calTab">
+			<thead>
+				<th>Sun</th>
+				<th>Mon</th>
+				<th>Tue</th>
+				<th>Wed</th>
+				<th>Thu</th>
+				<th>Fri</th>
+				<th>Sat</th>
+			</thead>
+			<tr>
+				<td><button id='1' onclick="newEvent('1')"></button></td>
+				<td><button id='2' onclick="newEvent('2')"></button></td>
+				<td><button id='3' onclick="newEvent('3')"></button></td>
+				<td><button id='4' onclick="newEvent('4')"></button></td>
+				<td><button id='5' onclick="newEvent('5')"></button></td>
+				<td><button id='6' onclick="newEvent('6')"></button></td>
+				<td><button id='7' onclick="newEvent('7')"></button></td>
+			</tr>
+			<tr>
+				<td><button id='8' onclick="newEvent('8')"></button></td>
+				<td><button id='9' onclick="newEvent('9')"></button></td>
+				<td><button id='10' onclick="newEvent('10')"></button></td>
+				<td><button id='11' onclick="newEvent('11')"></button></td>
+				<td><button id='12' onclick="newEvent('12')"></button></td>
+				<td><button id='13' onclick="newEvent('13')"></button></td>
+				<td><button id='14' onclick="newEvent('14')"></button></td>
+			</tr>
+			<tr>
+				<td><button id='15' onclick="newEvent('15')"></button></td>
+				<td><button id='16' onclick="newEvent('16')"></button></td>
+				<td><button id='17' onclick="newEvent('17')"></button></td>
+				<td><button id='18' onclick="newEvent('18')"></button></td>
+				<td><button id='19' onclick="newEvent('19')"></button></td>
+				<td><button id='20' onclick="newEvent('20')"></button></td>
+				<td><button id='21' onclick="newEvent('21')"></button></td>
+			</tr>
+			<tr>
+				<td><button id='22' onclick="newEvent('22')"></button></td>
+				<td><button id='23' onclick="newEvent('23')"></button></td>
+				<td><button id='24' onclick="newEvent('24')"></button></td>
+				<td><button id='25' onclick="newEvent('25')"></button></td>
+				<td><button id='26' onclick="newEvent('26')"></button></td>
+				<td><button id='27' onclick="newEvent('27')"></button></td>
+				<td><button id='28' onclick="newEvent('28')"></button></td>
+			</tr>
+			<tr>
+				<td><button id='29' onclick="newEvent('29')"></button></td>
+				<td><button id='30' onclick="newEvent('30')"></button></td>
+				<td><button id='31' onclick="newEvent('31')"></button></td>
+				<td><button id='32' onclick="newEvent('32')"></button></td>
+				<td><button id='33' onclick="newEvent('33')"></button></td>
+				<td><button id='34' onclick="newEvent('34')"></button></td>
+				<td><button id='35' onclick="newEvent('35')"></button></td>
+			</tr>
+			<tr>
+				<td><button id='36' onclick="newEvent('36')"></button></td>
+				<td><button id='37' onclick="newEvent('37')"></button></td>
+				<td><button id='38' onclick="newEvent('38')"></button></td>
+				<td><button id='39' onclick="newEvent('39')"></button></td>
+				<td><button id='40' onclick="newEvent('40')"></button></td>
+				<td><button id='41' onclick="newEvent('41')"></button></td>
+				<td><button id='42' onclick="newEvent('42')"></button></td>
+			</tr>			
+		</table>
+
+		<h2>Event List</h2>
+		<ul id="myUL"></ul>
+	</div>
+  </p>
+ </body>
+</html>

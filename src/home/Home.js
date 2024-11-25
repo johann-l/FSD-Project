@@ -1,6 +1,6 @@
 import '../css-files/home.css'; //css
 import imgcalc from '../img/calc.png'; import imgcalend from '../img/calend.png'; //img
-import myFunction from './Review'; import NavItem from './NavItem.js'; //js
+import myFunction from './ReviewAlert.js'; import NavItem from './NavItem.js'; //js
 import React from 'react';
 
 export default function Home(){
