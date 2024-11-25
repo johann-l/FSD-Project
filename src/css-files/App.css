@@ -1,0 +1,26 @@
+body {
+	background-color: #447868;
+	font-family: system-ui;
+	color: black;
+}
+
+body p, div div ol, div div ul{
+	font-size: 20px;
+	color: aliceblue;
+}
+
+a {	
+	font-size: x-large;
+	font-family: sans-serif;
+}
+
+a:visited {
+	color: rgba(201, 233, 142, 0.932);
+}
+
+h1{
+	color: rgb(173, 218, 241); 
+	text-decoration:wavy underline;
+	font-size:38px;
+}
+
