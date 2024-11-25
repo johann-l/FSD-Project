@@ -1,11 +1,45 @@
-legend::first-letter{
-   display: block;
-   text-transform: uppercase;
-   color:darkred;
-    font-size:20px;
+legend::first-letter {
+    display: inline-block;
+    text-transform: uppercase;
+    color: darkred;
+    font-size: 24px;
+    font-weight: bold;
+}
+legend {
+    color: #333333;
+    font-size: 18px;
+    font-weight: bold;
+    font-variant: small-caps;
+    margin-bottom: 15px;
+    padding: 0 10px;
+    background-color: #b5c168;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 textarea{
     resize: none;
+    margin-left: 100px;
+    font-size: 19px;
+}
+input[type="number"]{
+    font-size: 19px;
+}
+fieldset {
+    margin-bottom: 32px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #b9a5d18d;
+    transition: background-color 0.3s ease;
+}
+label{
+    font-size: 25px;
+    color: #333;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 8px;
+    margin-right: 10px;
+    margin-left: 100px;
 }
 button{
     display: block;
@@ -15,13 +49,6 @@ button{
     background-color: burlywood;
     color: black;
 }
-fieldset{
-    margin-bottom: 32px;
-    border:1px dashed black;
+fieldset:hover legend{
+    background-color: #4CAF50;
 }
-legend{
-    color:white; 
-    font-size: 17px; 
-    font-variant: small-caps;
-}
-    
